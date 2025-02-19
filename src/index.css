@@ -1,0 +1,50 @@
+@import "tailwindcss" screen;
+@import "tailwindcss/utilities" screen;
+
+
+/* General Styles */
+body {
+  @apply bg-gray-100 text-gray-900 font-sans;
+}
+
+h1, h2, h3, h4 {
+  @apply font-bold text-gray-800;
+}
+
+/* Listing Card Styles */
+.listing-card {
+  @apply bg-white border border-gray-200 rounded-xl shadow-lg p-5 transition-all duration-200 hover:shadow-2xl hover:scale-[1.02];
+}
+
+.listing-card img {
+  @apply w-full h-48 object-cover rounded-md;
+}
+
+.listing-card h2 {
+  @apply text-lg mt-2;
+}
+
+.listing-card.saved {
+  @apply border-red-500;
+}
+
+.listing-card p:not(.price-text) {
+  @apply text-sm text-gray-600;
+}
+
+.listing-card .price-text {
+  @apply text-2xl text-gray-600;
+}
+
+.listing-card button {
+  @apply mt-3 w-full bg-blue-500 text-white py-3 rounded-lg font-medium hover:bg-blue-600 active:scale-95 transition-all;
+}
+
+/* Filters Section */
+.filters-container {
+  @apply bg-white p-4 rounded-lg shadow-md mb-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4;
+}
+
+.filters-container input {
+  @apply border border-gray-300 rounded-lg px-3 py-2 w-full text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-150;
+}
